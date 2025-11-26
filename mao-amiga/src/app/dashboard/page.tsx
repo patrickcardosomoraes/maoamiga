@@ -1,6 +1,6 @@
 import { CampaignCard } from "@/components/organisms/CampaignCard"
 import { Button } from "@/components/atoms/Button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/atoms/Card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/atoms/Card"
 import { PlusCircle, TrendingUp, Heart } from "lucide-react"
 import Link from "next/link"
 

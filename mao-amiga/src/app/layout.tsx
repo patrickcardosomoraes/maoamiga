@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="pt-BR" className="scroll-smooth">
       <body className={cn(inter.variable, "min-h-screen flex flex-col font-sans antialiased")}>
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1 pt-8 pb-16">
           {children}
         </main>
         <Footer />

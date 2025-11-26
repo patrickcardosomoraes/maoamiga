@@ -3,7 +3,7 @@ import { HeartHandshake } from "lucide-react"
 
 export function Footer() {
     return (
-        <footer className="border-t bg-secondary/30">
+        <footer className="border-t bg-secondary/30 mt-8">
             <div className="container-custom py-8 md:py-12 lg:py-16">
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="space-y-4">
