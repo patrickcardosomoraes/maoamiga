@@ -1,6 +1,10 @@
 # 🤝 Mão Amiga - Plataforma de Crowdfunding Social
 
+[![GitHub](https://img.shields.io/badge/GitHub-patrickcardosomoraes%2Fmaoamiga-blue?logo=github)](https://github.com/patrickcardosomoraes/maoamiga/)
+
 Uma plataforma moderna de vaquinhas online com **taxa zero**, focada em solidariedade e transparência. Receba doações via Pix instantaneamente!
+
+🔗 **Repositório**: [https://github.com/patrickcardosomoraes/maoamiga/](https://github.com/patrickcardosomoraes/maoamiga/)
 
 ## 🚀 Tecnologias
 
@@ -74,7 +78,8 @@ mao-amiga/
 ### 1. Clone e instale dependências
 
 ```bash
-cd mao-amiga
+git clone https://github.com/patrickcardosomoraes/maoamiga.git
+cd maoamiga/mao-amiga
 npm install
 ```
 
