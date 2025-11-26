@@ -1,12 +1,13 @@
 "use server"
 
-import { supabase } from "@/lib/supabase"
+import { createClient } from "@/lib/supabase-server"
 import { Campaign } from "@/types"
 
 /**
  * Fetch all active campaigns
  */
 export async function getCampaigns(): Promise<Campaign[]> {
+    const supabase = await createClient()
     const { data, error } = await supabase
         .from('campaigns')
         .select('*')
@@ -38,6 +39,7 @@ export async function getCampaigns(): Promise<Campaign[]> {
  * Fetch a single campaign by ID
  */
 export async function getCampaignById(id: string): Promise<Campaign | null> {
+    const supabase = await createClient()
     const { data, error } = await supabase
         .from('campaigns')
         .select('*')
@@ -78,6 +80,7 @@ export async function createCampaign(formData: {
     videoUrl?: string
     creatorId: string
 }): Promise<{ success: boolean; campaignId?: string; error?: string }> {
+    const supabase = await createClient()
     const { data, error } = await supabase
         .from('campaigns')
         .insert([
@@ -107,6 +110,7 @@ export async function createCampaign(formData: {
  * Track analytics event
  */
 export async function trackEvent(campaignId: string, eventType: 'view' | 'share' | 'pix_click' | 'copy_key') {
+    const supabase = await createClient()
     const { error } = await supabase
         .from('campaign_analytics')
         .insert([
@@ -130,6 +134,7 @@ export async function addSupporter(data: {
     amount: number
     message?: string
 }): Promise<{ success: boolean; error?: string }> {
+    const supabase = await createClient()
     const { error } = await supabase
         .from('supporters')
         .insert([
@@ -153,6 +158,7 @@ export async function addSupporter(data: {
  * Get supporters for a campaign
  */
 export async function getSupporters(campaignId: string) {
+    const supabase = await createClient()
     const { data, error } = await supabase
         .from('supporters')
         .select('*')

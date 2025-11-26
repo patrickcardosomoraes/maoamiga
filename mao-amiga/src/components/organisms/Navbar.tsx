@@ -1,16 +1,18 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/atoms/Button"
 import { HeartHandshake, Menu, X, LogOut } from "lucide-react"
-import { supabase } from "@/lib/supabase"
+import { createClient } from "@/lib/supabase-client"
+import { User } from "@supabase/supabase-js"
 
 export function Navbar() {
+    const supabase = useMemo(() => createClient(), [])
     const router = useRouter()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [user, setUser] = useState<any>(null)
+    const [user, setUser] = useState<User | null>(null)
 
     useEffect(() => {
         // Check current user
@@ -24,7 +26,7 @@ export function Navbar() {
         })
 
         return () => subscription.unsubscribe()
-    }, [])
+    }, [supabase])
 
     const handleLogout = async () => {
         await supabase.auth.signOut()

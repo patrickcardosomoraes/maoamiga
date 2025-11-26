@@ -8,9 +8,10 @@ import { Input } from "@/components/atoms/Input"
 import { Label } from "@/components/atoms/Label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/atoms/Card"
 import { HeartHandshake } from "lucide-react"
-import { supabase } from "@/lib/supabase"
+import { createClient } from "@/lib/supabase-client"
 
 export default function LoginPage() {
+    const supabase = createClient()
     const router = useRouter()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")

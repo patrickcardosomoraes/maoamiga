@@ -62,7 +62,8 @@ export default function DashboardPage() {
                         pixKey: "email@example.com",
                         beneficiaryName: "Maria da Silva",
                         createdAt: "2023-10-01",
-                        creatorId: "user1"
+                        creatorId: "user1",
+                        status: 'active'
                     }} />
                 </div>
             </div>

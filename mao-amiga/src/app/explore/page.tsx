@@ -16,7 +16,8 @@ const campaigns: Campaign[] = [
         pixKey: "email@example.com",
         beneficiaryName: "Maria da Silva",
         createdAt: "2023-10-01",
-        creatorId: "user1"
+        creatorId: "user1",
+        status: 'active'
     },
     {
         id: "2",
@@ -28,7 +29,8 @@ const campaigns: Campaign[] = [
         pixKey: "12345678900",
         beneficiaryName: "Abrigo Animal",
         createdAt: "2023-10-05",
-        creatorId: "user2"
+        creatorId: "user2",
+        status: 'active'
     },
     {
         id: "3",
@@ -40,7 +42,8 @@ const campaigns: Campaign[] = [
         pixKey: "horta@comunidade.org",
         beneficiaryName: "Associação de Moradores",
         createdAt: "2023-10-10",
-        creatorId: "user3"
+        creatorId: "user3",
+        status: 'active'
     },
     {
         id: "4",
@@ -52,7 +55,8 @@ const campaigns: Campaign[] = [
         pixKey: "escola@edu.br",
         beneficiaryName: "Escola Municipal",
         createdAt: "2023-10-15",
-        creatorId: "user4"
+        creatorId: "user4",
+        status: 'active'
     },
     {
         id: "5",
@@ -64,7 +68,8 @@ const campaigns: Campaign[] = [
         pixKey: "joao@email.com",
         beneficiaryName: "João da Silva",
         createdAt: "2023-10-20",
-        creatorId: "user5"
+        creatorId: "user5",
+        status: 'active'
     }
 ]
 

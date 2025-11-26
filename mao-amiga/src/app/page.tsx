@@ -16,7 +16,8 @@ const featuredCampaigns: Campaign[] = [
     pixKey: "email@example.com",
     beneficiaryName: "Maria da Silva",
     createdAt: "2023-10-01",
-    creatorId: "user1"
+    creatorId: "user1",
+    status: 'active'
   },
   {
     id: "2",
@@ -28,7 +29,8 @@ const featuredCampaigns: Campaign[] = [
     pixKey: "12345678900",
     beneficiaryName: "Abrigo Animal",
     createdAt: "2023-10-05",
-    creatorId: "user2"
+    creatorId: "user2",
+    status: 'active'
   },
   {
     id: "3",
@@ -40,7 +42,8 @@ const featuredCampaigns: Campaign[] = [
     pixKey: "horta@comunidade.org",
     beneficiaryName: "Associação de Moradores",
     createdAt: "2023-10-10",
-    creatorId: "user3"
+    creatorId: "user3",
+    status: 'active'
   }
 ]
 
