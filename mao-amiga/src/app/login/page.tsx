@@ -46,28 +46,7 @@ export default function LoginPage() {
         }
     }
 
-    const handleGoogleLogin = async () => {
-        setIsLoading(true)
-        setError(null)
 
-        try {
-            const { error: signInError } = await supabase.auth.signInWithOAuth({
-                provider: 'google',
-                options: {
-                    redirectTo: `${window.location.origin}/auth/callback`
-                }
-            })
-
-            if (signInError) {
-                setError(signInError.message)
-            }
-        } catch (err) {
-            setError("Erro ao fazer login com Google.")
-            console.error(err)
-        } finally {
-            setIsLoading(false)
-        }
-    }
 
     return (
         <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-secondary/30">
@@ -121,30 +100,7 @@ export default function LoginPage() {
                             Entrar
                         </Button>
 
-                        <div className="relative">
-                            <div className="absolute inset-0 flex items-center">
-                                <span className="w-full border-t" />
-                            </div>
-                            <div className="relative flex justify-center text-xs uppercase">
-                                <span className="bg-card px-2 text-muted-foreground">
-                                    Ou continue com
-                                </span>
-                            </div>
-                        </div>
 
-                        <div className="grid grid-cols-2 gap-4">
-                            <Button
-                                variant="outline"
-                                type="button"
-                                onClick={handleGoogleLogin}
-                                disabled={isLoading}
-                            >
-                                Google
-                            </Button>
-                            <Button variant="outline" type="button" disabled>
-                                Facebook
-                            </Button>
-                        </div>
                     </CardContent>
                 </form>
                 <CardFooter className="flex justify-center">
